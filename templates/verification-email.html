@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins:wght@700&display=swap');
+      .main {
+        padding-top: 16px;
+        text-align: center;
+        width: 375px;
+        margin: auto;
+      }
+      h1, .confirm-btn {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+      }
+      h1 {
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 22px;
+        line-height: 1.17;
+        margin: 22px 50px 42px;
+      }
+      p {
+        font-family: 'DM Sans', sans-serif;
+        color: #939393;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.21;
+        margin: 30px 50px;
+      }
+      .email {
+        text-decoration: underline;
+        color: #425af2;
+      }
+      .confirm-btn {
+        display: block;
+        font-size: 18px;
+        line-height: 1.33;
+        color: #fff !important; /*ensure email client style is overridden*/
+        text-decoration: none;
+        background-color: #425af2;
+        border-radius: 46px;
+        margin: 55px 20px;
+        padding: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img width="168px" height="40px" alt="FightPandemics" src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/6751d5d0-2aea-4d61-807f-e8188958495f/168x40.png" >
+
+      <h1>Confirm your email address</h1>
+
+      <p>Welcome to FightPandemics, <span class="email">{{ user.email }}</span></p>
+
+      <p>Confirm your email address and create your profile to get started</p>
+
+      <a class="confirm-btn" href="{{ url }}">Confirm Account</a>
+    </div>
+  </body>
+</html>
