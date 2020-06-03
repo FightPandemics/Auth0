@@ -21,3 +21,7 @@ Email templates for emails from Auth0 delivered by our email provider, currently
 ### verification-email.html
 
 Email sent to verify a user's email when they sign-up with email & password. Template name in Auth0: "Verification Email (using Link)"
+
+### welcome-email.html
+
+Email sent after user verifies email or confirms social authentication. Template name in Auth0: "
