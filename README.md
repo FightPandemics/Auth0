@@ -25,3 +25,7 @@ Email sent to verify a user's email when they sign-up with email & password. Tem
 ### welcome-email.html
 
 Email sent after user verifies email or confirms social authentication. Template name in Auth0: "
+
+### verification-email.html
+
+Email sent to change a user's password for those who signed up with email & password. Template name in Auth0: "Change Password"
