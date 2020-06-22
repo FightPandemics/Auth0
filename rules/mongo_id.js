@@ -8,9 +8,9 @@ function setMongoIdToUser(user, context, callback) {
     user.app_metadata = {};
   }
 
-  const path = require('path');
+  const url = require('url');
   const { APP_URL } = configuration;
-  const MONGO_KEY = path.join(APP_URL, 'mongo_id');
+  const MONGO_KEY = url.resolve(APP_URL, 'mongo_id');
 
   // If the mongo_id is already set we can also skip this
   if (user.app_metadata.mongo_id) {
