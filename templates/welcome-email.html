@@ -2,12 +2,19 @@
   <head>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&family=Poppins:wght@700&display=swap');
+      /* table to prevent overriding of styles by email client
+        see: https://litmus.com/community/discussions/472-cannot-align-html-email-to-center-in-yahoo-mail */
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        table-layout: fixed;
+      }
+      table table {
+        table-layout: auto;
+      }
       .main {
         padding-top: 16px;
         text-align: center;
-        width: 375px;
-        margin: auto;
-        
       }
       h1, .confirm-btn {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -53,35 +60,44 @@
     </style>
   </head>
   <body>
-    <div class="main">
-        <img width="60px" height="55px"  align="left" src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/7ab126b4-d907-4578-8d7f-66bad607993a/122x108.png">
-        <a href="http://fightpandemics.com/">
-        <img width="70px" height="70px" align="center" alt="FightPandemics" style="margin-left: 34px;"
-        src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/da36013a-1030-4afe-bbb5-91c5c10d7fb1/515x507.png">
-        </a>
-        <img width="94px" height="55px" align="right" src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/0d11835a-a8f2-41ac-96d5-bae7ed210a6f/106x62.png">
-    
-    <p class="hashtag">#ForCommunitiesByCommunities</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="" bgcolor="#fff">
+      <tr>
+        <td align="center">
+          <table width="375" border="0" align="center" cellpadding="0" cellspacing="0" class="deviceWidth">
+            <tr>
+              <td width="375" align="center">
+                <div class="main">
+                  <img width="60px" height="55px"  align="left" src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/7ab126b4-d907-4578-8d7f-66bad607993a/122x108.png">
+                  <a href="http://fightpandemics.com/">
+                  <img width="70px" height="70px" align="center" alt="FightPandemics" style="margin-left: 34px;"
+                  src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/62efbe31-9b77-4a53-9f9c-f7decae30b62/1043x1043.png">
+                  </a>
+                  <img width="94px" height="55px" align="right" src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/0d11835a-a8f2-41ac-96d5-bae7ed210a6f/106x62.png">
+                  <p class="hashtag">#ForCommunitiesByCommunities</p>
+                  <h1>Welcome to FightPandemics</h1>
+                  <p>{{user.name}}, now that you have an account, get started by clicking the button below to offer or ask for help.</p>
+                  <p>Don't miss out our updates on:</p>
+                  <a href="https://www.facebook.com/FightPandemics/"><img width="30px" height="30px"
+                      src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/fae2b819-fbe9-4778-a344-9895fbdc160f/300x300.png"></a>
+                  <a href="https://www.instagram.com/fightpandemics/"><img width="30px" height="30px"
+                      src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/9d79c830-366e-4142-bcb4-a9b3969d8e5f/300x300.png"></a>
+                  <a href="https://twitter.com/FightPandemics"><img width="30px" height="30px"
+                      src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/92300f6c-74f4-4cc0-88b0-4a19049366c5/300x300.png"></a>
+                  <a href="https://www.linkedin.com/company/fightpandemics/"><img width="30px" height="30px"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/148f48d8-c076-4fb9-9de2-371a38678d2a/100x100.png"></a>
+                  <a href="https://medium.com/@fightpandemics"><img width="30px" height="30px"
+                      src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/cb0d26d5-be18-4e59-ae3a-f3f9c422e6c8/46x46.png"></a>
+                  <a href="https://www.youtube.com/channel/UCfytoZ4ZczawKbtQLnipYzw"> <img width="30px" height="30px"
+                      src="https://injneb.stripocdn.email/content/guids/CABINET_266af1af1034fbee85d71193a9e9a593/images/33161592560614001.png"></a>
+                  <!-- replace href for environment as appropriate -->
+                  <a class="confirm-btn" href="https://fightpandemics.com">Go to FightPandemics</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
 
-      <h1>Welcome to FightPandemics</h1>
-
-      <p>{{user.name}}, now that you have an account, get started by clicking the button below to offer or ask for help.</p>
-      <p>Don't miss out our updates on:</p>
-      <a href="https://www.facebook.com/FightPandemics/">
-        <img width="30px" height="30px"
-        src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/fae2b819-fbe9-4778-a344-9895fbdc160f/300x300.png"></a>
-        <a href="https://www.instagram.com/fightpandemics/">
-        <img width="30px" height="30px"
-        src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/9d79c830-366e-4142-bcb4-a9b3969d8e5f/300x300.png"></a>
-         <a href="https://twitter.com/FightPandemics">
-        <img width="30px" height="30px"
-        src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/92300f6c-74f4-4cc0-88b0-4a19049366c5/300x300.png"></a>
-    <a href="https://www.linkedin.com/company/fightpandemics/">
-        <img width="30px" height="30px"
-        src="http://cdn.mcauto-images-production.sendgrid.net/85ee67c5cadc8b02/148f48d8-c076-4fb9-9de2-371a38678d2a/100x100.png"></a>
-      
-      <!-- replace href for environment as appropriate -->
-      <a class="confirm-btn" href="https://fightpandemics.com">Go to FightPandemics</a>
-    </div>
   </body>
 </html>
